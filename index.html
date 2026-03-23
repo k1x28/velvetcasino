@@ -1340,7 +1340,7 @@ function crashAction(){
   const btn=document.getElementById('crash-btn');
   if(crashActive){
     cancelAnimationFrame(crashAnimFrame); crashActive=false;
-    const rawProfit=Math.round((crashBet*crashMult-crashBet)*100)/100;
+    const rawProfit=Math.round(crashBet*crashMult*100)/100;
     const profit=applyBetResult(crashBet,rawProfit);
     btn.textContent='Place Bet'; btn.className='btn-action';
     document.getElementById('crash-mult-display').className='multiplier-big';
@@ -1367,8 +1367,10 @@ function crashAction(){
       crashActive=false; cancelAnimationFrame(crashAnimFrame);
       document.getElementById('crash-mult-display').className='multiplier-big crashed';
       document.getElementById('crash-mult-display').textContent=crashCrashAt.toFixed(2)+'×';
+      if(!currentUser.stats) currentUser.stats={wins:0,losses:0,total_wagered:0,biggest_win:0};
+      currentUser.stats.total_wagered=Math.round((currentUser.stats.total_wagered+crashBet)*100)/100;
       currentUser.stats.losses++;
-      const stored2=DB.getUser(currentUser.username); if(stored2){stored2.stats=currentUser.stats;DB.saveUser(stored2);}
+      const s=DB.getUser(currentUser.username); if(s){s.stats=currentUser.stats;DB.saveUser(s);}
       btn.textContent='Place Bet'; btn.className='btn-action';
       showResult('crash-result','crash-result-title','crash-result-detail',false,false,
         `💥 Crashed at ${crashCrashAt.toFixed(2)}×`,`Lost $${bet.toFixed(2)}`);
@@ -1423,6 +1425,8 @@ function revealMine(pos,cell){
       c.classList.add('disabled');
       if(minePositions.has(parseInt(c.dataset.pos))&&!c.classList.contains('revealed')){c.textContent='💣';c.classList.add('mine');}
     });
+    if(!currentUser.stats) currentUser.stats={wins:0,losses:0,total_wagered:0,biggest_win:0};
+    currentUser.stats.total_wagered=Math.round((currentUser.stats.total_wagered+minesBet)*100)/100;
     currentUser.stats.losses++;
     const stored=DB.getUser(currentUser.username); if(stored){stored.stats=currentUser.stats;DB.saveUser(stored);}
     document.getElementById('mines-start-btn').style.display='block';
@@ -1443,7 +1447,8 @@ function minesCashout(){
   const mult=minesCalcMult(minesRevealed.length);
   const rawProfit=Math.round((minesBet*mult-minesBet)*100)/100;
   minesActive=false;
-  const profit=applyBetResult(0,minesBet+rawProfit);
+  const rawPayout=Math.round(minesBet*mult*100)/100;
+  const profit=applyBetResult(minesBet,rawPayout);
   document.querySelectorAll('.mine-cell').forEach(c=>c.classList.add('disabled'));
   document.getElementById('mines-start-btn').style.display='block';
   document.getElementById('mines-cashout-btn').style.display='none';
@@ -1762,7 +1767,10 @@ function chickenCross(){
   if(hit){
     if(laneEl){ laneEl.textContent='💥'; laneEl.classList.add('danger'); }
     chickenActive=false;
-    applyBetResult(chickenBet, -chickenBet);
+    if(!currentUser.stats) currentUser.stats={wins:0,losses:0,total_wagered:0,biggest_win:0};
+    currentUser.stats.total_wagered=Math.round((currentUser.stats.total_wagered+chickenBet)*100)/100;
+    currentUser.stats.losses++;
+    const stored=DB.getUser(currentUser.username); if(stored){stored.stats=currentUser.stats;DB.saveUser(stored);}
     document.getElementById('ck-cross-btn').style.display='none';
     document.getElementById('ck-cashout-btn').style.display='none';
     document.getElementById('ck-start-btn').style.display='block';
@@ -1783,14 +1791,15 @@ function chickenCashout(){
   if(!chickenActive&&chickenLane===0) return;
   chickenActive=false;
   const mult=chickenCalcMult(chickenLane);
-  const rawProfit=Math.round((chickenBet*mult-chickenBet)*100)/100;
-  const profit=applyBetResult(chickenBet,rawProfit);
+  const displayProfit=Math.round((chickenBet*mult-chickenBet)*100)/100;
+  const rawPayout=Math.round(chickenBet*mult*100)/100;
+  const profit=applyBetResult(chickenBet,rawPayout);
   document.getElementById('ck-cross-btn').style.display='none';
   document.getElementById('ck-cashout-btn').style.display='none';
   document.getElementById('ck-start-btn').style.display='block';
   showResult('ck-result','ck-result-title','ck-result-detail',true,false,
-    `🐔 Safe! ${mult.toFixed(2)}×`,`Crossed ${chickenLane} lanes — +$${rawProfit.toFixed(2)}`);
-  toast(`🐔 Cashed out! +$${rawProfit.toFixed(2)}`,'win');
+    `🐔 Safe! ${mult.toFixed(2)}×`,`Crossed ${chickenLane} lanes — +$${displayProfit.toFixed(2)}`);
+  toast(`🐔 Cashed out! +$${displayProfit.toFixed(2)}`,'win');
 }
 
 // ══════════════════════════════════════════════════════════
