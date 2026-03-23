@@ -34,9 +34,9 @@ nav button{background:none;border:none;color:var(--muted);font-family:'DM Mono',
 nav button:hover{color:var(--text);background:var(--surface);}
 nav button.active{color:var(--gold);background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2);}
 .header-right{display:flex;align-items:center;gap:7px;flex-shrink:0;}
-.balance-pill{display:flex;align-items:center;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:99px;padding:4px 10px;font-size:10px;height:28px;flex-shrink:0;}
-.balance-pill .coin{color:var(--gold);font-size:10px;}
-#balance-display{color:var(--gold2);font-weight:500;letter-spacing:.3px;font-size:10px;}
+.balance-pill{display:flex;align-items:center;gap:2px;background:var(--surface);border:1px solid var(--border);border-radius:99px;padding:2px 6px;font-size:7px;}
+.balance-pill .coin{color:var(--gold);font-size:7px;}
+#balance-display{color:var(--gold2);font-weight:500;letter-spacing:.2px;font-size:7px;}
 .avatar-btn{width:32px;height:32px;border-radius:50%;background:var(--surface2);border:2px solid var(--border);cursor:pointer;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:14px;transition:border-color .2s;}
 .avatar-btn:hover{border-color:var(--gold);}
 .avatar-btn img{width:100%;height:100%;object-fit:cover;}
@@ -50,11 +50,11 @@ main{position:relative;z-index:1;}
 /* ── AUTH ── */
 #auth-screen{min-height:calc(100vh - 58px);display:flex;align-items:center;justify-content:center;padding:24px;}
 .auth-box{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:40px 36px;width:380px;max-width:100%;}
-.auth-box h2{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);text-align:center;margin-bottom:6px;}
+.auth-box h2{font-family:'Playfair Display',serif;font-size:26px;color:var(--gold);text-align:center;margin-bottom:6px;}
 .auth-box p{text-align:center;color:var(--muted);font-size:11px;margin-bottom:28px;letter-spacing:1px;}
 .field{margin-bottom:14px;}
 .field label{display:block;font-size:10px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-bottom:5px;}
-.field input{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-family:'DM Mono',monospace;font-size:13px;transition:border-color .2s;}
+.field input{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:11px 13px;color:var(--text);font-family:'DM Mono',monospace;font-size:14px;transition:border-color .2s;}
 .field input:focus{outline:none;border-color:var(--gold);}
 .btn-gold{width:100%;padding:13px;background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;border-radius:8px;color:#0a0a0f;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:opacity .2s,transform .1s;margin-top:6px;}
 .btn-gold:hover{opacity:.9;}
@@ -66,16 +66,16 @@ main{position:relative;z-index:1;}
 /* ── LOBBY ── */
 #lobby-screen{padding:28px;}
 .lobby-hero{text-align:center;padding:36px 0 28px;}
-.lobby-hero h1{font-family:'Playfair Display',serif;font-size:clamp(20px,3.5vw,32px);color:var(--gold);letter-spacing:3px;margin-bottom:8px;}
-.lobby-hero p{color:var(--muted);font-size:12px;}
+.lobby-hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,54px);color:var(--gold);letter-spacing:5px;margin-bottom:8px;}
+.lobby-hero p{color:var(--muted);font-size:14px;}
 .rank-display{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:7px 18px;border-radius:99px;font-size:12px;letter-spacing:1px;font-weight:500;border:1px solid;}
 .section-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:24px 0 12px;max-width:1200px;margin-left:auto;margin-right:auto;}
 .games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;max-width:1200px;margin:0 auto;}
 .game-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 20px;cursor:pointer;transition:all .22s;position:relative;overflow:hidden;}
 .game-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 60%,rgba(201,168,76,.04));border-radius:14px;}
 .game-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 32px rgba(201,168,76,.1);}
-.game-icon{font-size:34px;margin-bottom:10px;}
-.game-card h3{font-family:'Playfair Display',serif;font-size:17px;color:var(--text);margin-bottom:5px;}
+.game-icon{font-size:40px;margin-bottom:12px;}
+.game-card h3{font-family:'Playfair Display',serif;font-size:19px;color:var(--text);margin-bottom:5px;}
 .game-card p{font-size:11px;color:var(--muted);line-height:1.6;}
 .game-badge{display:inline-block;margin-top:10px;padding:3px 9px;border-radius:4px;font-size:9px;letter-spacing:1px;text-transform:uppercase;}
 .badge-green{background:rgba(76,175,125,.15);color:var(--green);}
@@ -90,7 +90,7 @@ main{position:relative;z-index:1;}
 .game-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;}
 .back-btn{background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--muted);font-family:'DM Mono',monospace;font-size:11px;padding:7px 13px;cursor:pointer;letter-spacing:1px;transition:all .2s;}
 .back-btn:hover{color:var(--text);border-color:var(--gold);}
-.game-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);}
+.game-title{font-family:'Playfair Display',serif;font-size:26px;color:var(--gold);}
 .game-area{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:16px;}
 .bet-controls{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;margin-top:20px;}
 .bet-field{flex:1;min-width:110px;}
@@ -119,8 +119,8 @@ main{position:relative;z-index:1;}
 
 /* ── COIN FLIP ── */
 .coin-container{display:flex;justify-content:center;margin:24px 0;}
-.coin-container .coin{width:96px;height:96px;border-radius:50%;border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:40px;background:radial-gradient(circle at 35% 35%,var(--gold2),var(--gold));box-shadow:0 0 32px rgba(201,168,76,.3);}
-.coin-container .coin.flipping{animation:coinFlip .8s ease-in-out;}
+.coin{width:110px;height:110px;border-radius:50%;border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:48px;background:radial-gradient(circle at 35% 35%,var(--gold2),var(--gold));box-shadow:0 0 32px rgba(201,168,76,.3);}
+.coin.flipping{animation:coinFlip .8s ease-in-out;}
 @keyframes coinFlip{0%{transform:rotateY(0)}50%{transform:rotateY(900deg) scale(.8)}100%{transform:rotateY(1800deg)}}
 .side-btns{display:flex;gap:10px;justify-content:center;}
 .side-btn{flex:1;max-width:130px;padding:9px 0;border-radius:8px;border:2px solid var(--border);background:var(--bg);color:var(--muted);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .15s;}
@@ -128,7 +128,7 @@ main{position:relative;z-index:1;}
 
 /* ── DICE ── */
 .dice-display{text-align:center;margin:16px 0;}
-.dice-roll-num{font-size:48px;font-family:'Playfair Display',serif;color:var(--gold);line-height:1;transition:color .3s;}
+.dice-roll-num{font-size:62px;font-family:'Playfair Display',serif;color:var(--gold);line-height:1;transition:color .3s;}
 .dice-subtitle{font-size:10px;color:var(--muted);letter-spacing:2px;margin-top:4px;}
 .range-container{margin:16px 0;}
 .range-label{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-bottom:6px;letter-spacing:1px;}
@@ -143,14 +143,14 @@ input[type=range]{width:100%;accent-color:var(--gold);height:4px;border-radius:2
 /* ── CRASH ── */
 .crash-chart{background:var(--bg);border:1px solid var(--border);border-radius:12px;height:200px;position:relative;overflow:hidden;margin-bottom:16px;}
 canvas#crash-canvas{width:100%!important;height:100%!important;}
-.multiplier-big{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:var(--gold);text-shadow:0 0 32px rgba(201,168,76,.5);pointer-events:none;transition:color .3s;}
+.multiplier-big{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Playfair Display',serif;font-size:50px;font-weight:700;color:var(--gold);text-shadow:0 0 32px rgba(201,168,76,.5);pointer-events:none;transition:color .3s;}
 .multiplier-big.crashed{color:var(--red);}
 
 /* ── MINES ── */
 .mines-stats{display:flex;gap:10px;justify-content:center;margin-bottom:16px;}
 .mines-stat{text-align:center;}
 .mines-stat .label{font-size:9px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;}
-.mines-stat .val{font-size:16px;color:var(--gold);margin-top:2px;}
+.mines-stat .val{font-size:18px;color:var(--gold);margin-top:2px;}
 .mines-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;max-width:320px;margin:0 auto 16px;}
 .mine-cell{aspect-ratio:1;background:var(--bg);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;transition:all .15s;user-select:none;}
 .mine-cell:hover:not(.revealed):not(.disabled){border-color:var(--gold);background:rgba(201,168,76,.06);transform:scale(1.05);}
@@ -185,7 +185,7 @@ canvas#crash-canvas{width:100%!important;height:100%!important;}
 
 /* ── ROULETTE ── */
 .wheel-container{text-align:center;margin:20px 0;}
-.roulette-number{display:inline-flex;align-items:center;justify-content:center;width:80px;height:80px;border-radius:50%;font-family:'Playfair Display',serif;font-size:36px;font-weight:700;border:3px solid;margin-bottom:7px;transition:all .4s;}
+.roulette-number{display:inline-flex;align-items:center;justify-content:center;width:96px;height:96px;border-radius:50%;font-family:'Playfair Display',serif;font-size:44px;font-weight:700;border:4px solid;margin-bottom:7px;transition:all .4s;}
 .roulette-number.red{background:rgba(224,85,85,.2);border-color:var(--red);color:var(--red);}
 .roulette-number.black{background:rgba(50,50,60,.5);border-color:#555;color:#aaa;}
 .roulette-number.green{background:rgba(76,175,125,.2);border-color:var(--green);color:var(--green);}
@@ -201,7 +201,7 @@ canvas#crash-canvas{width:100%!important;height:100%!important;}
 .crates-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:20px;}
 .crate-card{border-radius:14px;padding:20px;text-align:center;cursor:pointer;transition:all .2s;border:2px solid;}
 .crate-card:hover{transform:translateY(-3px);}
-.crate-card .crate-icon{font-size:42px;margin-bottom:10px;filter:drop-shadow(0 0 12px currentColor);}
+.crate-card .crate-icon{font-size:52px;margin-bottom:10px;filter:drop-shadow(0 0 12px currentColor);}
 .crate-card h3{font-family:'Playfair Display',serif;font-size:17px;margin-bottom:5px;}
 .crate-card p{font-size:11px;margin-bottom:12px;line-height:1.5;}
 .crate-card .crate-price{font-size:14px;font-weight:500;}
@@ -220,8 +220,8 @@ canvas#crash-canvas{width:100%!important;height:100%!important;}
 .crate-reward{display:none;background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;margin-top:16px;}
 .crate-reward.show{display:block;animation:rewardPop .4s cubic-bezier(.34,1.56,.64,1);}
 @keyframes rewardPop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
-.reward-icon{font-size:48px;margin-bottom:10px;}
-.reward-title{font-family:'Playfair Display',serif;font-size:18px;color:var(--gold);margin-bottom:5px;}
+.reward-icon{font-size:64px;margin-bottom:10px;}
+.reward-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--gold);margin-bottom:5px;}
 .reward-detail{font-size:13px;color:var(--muted);}
 
 /* ── PLINKO ── */
@@ -245,7 +245,7 @@ canvas#plinko-canvas{width:100%;border-radius:12px;background:var(--bg);border:1
 .chicken-stats{display:flex;gap:14px;justify-content:center;margin-bottom:14px;}
 .ck-stat{text-align:center;}
 .ck-stat .lbl{font-size:9px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;}
-.ck-stat .val{font-size:16px;color:var(--gold);margin-top:2px;}
+.ck-stat .val{font-size:18px;color:var(--gold);margin-top:2px;}
 .lane-btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:14px;}
 .lane-btn{padding:8px 16px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--muted);font-family:'DM Mono',monospace;font-size:10px;cursor:pointer;transition:all .15s;}
 .lane-btn:hover{border-color:var(--gold);color:var(--gold);}
@@ -254,10 +254,10 @@ canvas#plinko-canvas{width:100%;border-radius:12px;background:var(--bg);border:1
 /* ── UPGRADER ── */
 .upgrader-display{display:flex;align-items:center;justify-content:center;gap:24px;margin:24px 0;}
 .upgrader-item{text-align:center;}
-.upgrader-item .item-icon{font-size:44px;margin-bottom:8px;transition:transform .3s;}
+.upgrader-item .item-icon{font-size:56px;margin-bottom:8px;transition:transform .3s;}
 .upgrader-item .item-name{font-size:12px;color:var(--muted);letter-spacing:1px;}
-.upgrader-item .item-val{font-size:16px;color:var(--gold);margin-top:4px;}
-.upgrader-arrow{font-size:26px;color:var(--muted);}
+.upgrader-item .item-val{font-size:18px;color:var(--gold);margin-top:4px;}
+.upgrader-arrow{font-size:32px;color:var(--muted);}
 .upgrader-wheel{width:100%;height:12px;background:var(--bg);border:1px solid var(--border);border-radius:99px;overflow:hidden;margin:12px 0;position:relative;}
 .upgrader-needle{position:absolute;top:0;bottom:0;width:3px;background:var(--gold);border-radius:2px;left:0;transition:left .05s;}
 .upgrader-zone{position:absolute;top:0;bottom:0;background:rgba(76,175,125,.3);}
@@ -272,7 +272,7 @@ canvas#plinko-canvas{width:100%;border-radius:12px;background:var(--bg);border:1
 /* ── LEADERBOARD ── */
 #leaderboard-screen{padding:28px;max-width:820px;margin:0 auto;}
 .lb-header{text-align:center;margin-bottom:24px;}
-.lb-header h2{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);}
+.lb-header h2{font-family:'Playfair Display',serif;font-size:30px;color:var(--gold);}
 .lb-header p{color:var(--muted);font-size:11px;margin-top:6px;letter-spacing:1.5px;}
 .rank-tiers{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:24px;}
 .tier-card{border-radius:12px;padding:14px 16px;border:1px solid;display:flex;align-items:center;gap:10px;}
@@ -280,19 +280,19 @@ canvas#plinko-canvas{width:100%;border-radius:12px;background:var(--bg);border:1
 .tier-info .tier-name{font-size:12px;font-weight:500;letter-spacing:.5px;}
 .tier-info .tier-range{font-size:10px;opacity:.7;margin-top:2px;}
 .lb-table{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
-.lb-row{display:grid;grid-template-columns:40px auto 1fr 90px 90px 60px;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--border);transition:background .15s;}
+.lb-row{display:grid;grid-template-columns:48px 44px 1fr 100px 120px 80px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--border);transition:background .15s;}
 .lb-row:last-child{border-bottom:none;}
 .lb-row:hover{background:var(--surface2);}
 .lb-row.header{background:var(--surface2);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);}
-.lb-pos{font-size:14px;text-align:center;}
-.lb-rank-badge{font-size:10px;padding:2px 8px;border-radius:4px;text-align:center;white-space:nowrap;}
+.lb-pos{font-size:16px;text-align:center;}
+.lb-rank-badge{font-size:11px;padding:2px 7px;border-radius:4px;text-align:center;white-space:nowrap;}
 .lb-user{display:flex;align-items:center;gap:9px;}
 .lb-avatar{width:30px;height:30px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;overflow:hidden;flex-shrink:0;}
 .lb-avatar img{width:100%;height:100%;object-fit:cover;}
-.lb-name{font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.lb-bal{color:var(--gold);font-size:12px;text-align:right;}
-.lb-wagered{color:var(--muted);font-size:10px;text-align:right;}
-.lb-wins{color:var(--green);font-size:11px;text-align:right;}
+.lb-name{font-size:13px;}
+.lb-bal{color:var(--gold);font-size:13px;text-align:right;}
+.lb-wagered{color:var(--muted);font-size:11px;text-align:right;}
+.lb-wins{color:var(--green);font-size:12px;text-align:right;}
 .rank-1{color:#ffd700;}
 .rank-2{color:#c0c0c0;}
 .rank-3{color:#cd7f32;}
@@ -304,15 +304,15 @@ canvas#plinko-canvas{width:100%;border-radius:12px;background:var(--bg);border:1
 .profile-avatar{width:96px;height:96px;border-radius:50%;border:3px solid var(--gold);background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:38px;overflow:hidden;cursor:pointer;}
 .profile-avatar img{width:100%;height:100%;object-fit:cover;}
 .avatar-change{position:absolute;bottom:0;right:0;width:26px;height:26px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;cursor:pointer;color:#0a0a0f;}
-.profile-name{font-family:'Playfair Display',serif;font-size:20px;color:var(--text);margin-bottom:5px;}
-.profile-balance{color:var(--gold);font-size:13px;letter-spacing:1px;margin-bottom:10px;}
+.profile-name{font-family:'Playfair Display',serif;font-size:26px;color:var(--text);margin-bottom:5px;}
+.profile-balance{color:var(--gold);font-size:15px;letter-spacing:1px;margin-bottom:10px;}
 .profile-rank{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:99px;font-size:11px;font-weight:500;border:1px solid;}
 .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px;}
 .stat-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;}
 .stat-card .s-label{font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;}
-.stat-card .s-val{font-size:20px;color:var(--gold);margin-top:5px;font-family:'Playfair Display',serif;}
+.stat-card .s-val{font-size:26px;color:var(--gold);margin-top:5px;font-family:'Playfair Display',serif;}
 .potions-section{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:16px;}
-.potions-section h3{font-family:'Playfair Display',serif;font-size:16px;color:var(--accent);margin-bottom:14px;}
+.potions-section h3{font-family:'Playfair Display',serif;font-size:18px;color:var(--accent);margin-bottom:14px;}
 .potions-grid{display:flex;gap:10px;flex-wrap:wrap;}
 .potion-item{display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid rgba(139,92,246,.3);border-radius:10px;padding:10px 14px;cursor:pointer;transition:all .15s;}
 .potion-item:hover{border-color:var(--accent);transform:scale(1.02);}
@@ -353,7 +353,7 @@ canvas#plinko-canvas{width:100%;border-radius:12px;background:var(--bg);border:1
   .game-area{padding:18px 14px;}
   .logo{font-size:16px;letter-spacing:2px;}
   .mines-grid{gap:5px;max-width:270px;}
-  .lb-row{grid-template-columns:32px auto 1fr 80px;gap:6px;padding:10px 12px;}
+  .lb-row{grid-template-columns:36px 38px 1fr 80px;}
   .lb-wagered,.lb-wins{display:none;}
   .crates-grid{grid-template-columns:1fr 1fr;}
 }
@@ -399,7 +399,7 @@ canvas#plinko-canvas{width:100%;border-radius:12px;background:var(--bg);border:1
     <p>Where fortune favours the bold</p>
     <div class="rank-display" id="lobby-rank-badge" style="display:none"></div>
   </div>
-  <div class="section-label">🎮 Games</div>
+  <div class="section-label">🎮 Classic Games</div>
   <div class="games-grid">
     <div class="game-card" onclick="showGame('coinflip')"><div class="game-icon">🪙</div><h3>Coin Flip</h3><p>Heads or tails — the purest test of fate.</p><span class="game-badge badge-green">2× Payout</span></div>
     <div class="game-card" onclick="showGame('dice')"><div class="game-icon">🎲</div><h3>Dice Roll</h3><p>Set your target. Custom multipliers up to 99×.</p><span class="game-badge badge-gold">Up to 99×</span></div>
@@ -408,6 +408,9 @@ canvas#plinko-canvas{width:100%;border-radius:12px;background:var(--bg);border:1
     <div class="game-card" onclick="showGame('slots')"><div class="game-icon">🎰</div><h3>Slots</h3><p>Spin the reels. Match symbols for big multipliers.</p><span class="game-badge badge-gold">Up to 50×</span></div>
     <div class="game-card" onclick="showGame('blackjack')"><div class="game-icon">🃏</div><h3>Blackjack</h3><p>Beat the dealer to 21. The classic card game.</p><span class="game-badge badge-green">2× Payout</span></div>
     <div class="game-card" onclick="showGame('roulette')"><div class="game-icon">🎡</div><h3>Roulette</h3><p>Bet on red, black, odd, even, or a specific number.</p><span class="game-badge badge-purple">Up to 36×</span></div>
+  </div>
+  <div class="section-label" style="margin-top:28px">✨ Mini Games</div>
+  <div class="games-grid">
     <div class="game-card" onclick="showScreen('crates')"><div class="game-icon">📦</div><h3>Crates</h3><p>Open crates for coins and rare potions. 5 tiers of crates.</p><span class="game-badge badge-blue">Win Potions</span></div>
     <div class="game-card" onclick="showGame('plinko')"><div class="game-icon">🔮</div><h3>Plinko</h3><p>Drop the ball. Choose your risk level for bigger rewards.</p><span class="game-badge badge-orange">Up to 110×</span></div>
     <div class="game-card" onclick="showGame('chicken')"><div class="game-icon">🐔</div><h3>Chicken Road</h3><p>Guide your chicken across traffic. Each lane pays more.</p><span class="game-badge badge-red">Escalating</span></div>
@@ -827,17 +830,71 @@ function startPotionTimer() {
 }
 
 // ══════════════════════════════════════════════════════════
-// STORAGE
+// STORAGE — server-first with localStorage fallback
 // ══════════════════════════════════════════════════════════
+
+// Server mode: true when running under Flask (same origin API)
+const SERVER_MODE = (() => {
+  try { return window.location.protocol !== 'file:'; } catch(e) { return false; }
+})();
+
 const DB = {
+  // ── Local helpers (always used as cache) ──
   getUsers()    { try{return JSON.parse(localStorage.getItem('vc_users')||'{}')}catch(e){return{}} },
   saveUsers(u)  { localStorage.setItem('vc_users', JSON.stringify(u)); },
   getSession()  { return localStorage.getItem('vc_session')||null; },
   saveSession(u){ localStorage.setItem('vc_session', u); },
   clearSession(){ localStorage.removeItem('vc_session'); },
   getUser(n)    { return this.getUsers()[n]||null; },
-  saveUser(u)   { const us=this.getUsers(); us[u.username]=u; this.saveUsers(us); if(typeof syncToPublicLeaderboard==='function') syncToPublicLeaderboard(u); },
-  register(username, password) {
+  saveUser(u)   {
+    // Always write locally so the rest of the game code works instantly
+    const us=this.getUsers(); us[u.username]=u; this.saveUsers(us);
+    // Fire-and-forget sync to server
+    if(SERVER_MODE) syncToServer(u);
+  },
+
+  // ── Auth: use server when available ──
+  async registerAsync(username, password) {
+    if(SERVER_MODE) {
+      try {
+        const r = await fetch('/api/register',{method:'POST',credentials:'include',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({username,password})});
+        const d = await r.json();
+        if(d.error) return d;
+        // Mirror into localStorage so offline mode stays in sync
+        const u = d.user;
+        u.potions = u.potions||{luck:0,greed:0,fortune:0,chaos:0};
+        u.activePotions = [];
+        const us=this.getUsers(); us[username]=u; this.saveUsers(us);
+        this.saveSession(username);
+        return {user:u};
+      } catch(e) { /* fall through to local */ }
+    }
+    return this._localRegister(username, password);
+  },
+
+  async loginAsync(username, password) {
+    if(SERVER_MODE) {
+      try {
+        const r = await fetch('/api/login',{method:'POST',credentials:'include',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({username,password})});
+        const d = await r.json();
+        if(d.error) return d;
+        const u = d.user;
+        u.potions = u.potions||{luck:0,greed:0,fortune:0,chaos:0};
+        u.activePotions = u.activePotions||[];
+        // Merge server data into local cache
+        const us=this.getUsers(); us[username]=Object.assign(us[username]||{},u); this.saveUsers(us);
+        this.saveSession(username);
+        return {user: us[username]};
+      } catch(e) { /* fall through to local */ }
+    }
+    return this._localLogin(username, password);
+  },
+
+  _localRegister(username, password) {
     if(!username||username.length<3) return {error:'Username must be at least 3 characters'};
     if(!password||password.length<4) return {error:'Password must be at least 4 characters'};
     const users=this.getUsers();
@@ -847,29 +904,33 @@ const DB = {
       potions:{luck:0,greed:0,fortune:0,chaos:0},
       activePotions:[], created:Date.now()};
     users[username]=user; this.saveUsers(users); this.saveSession(username);
-    if(typeof syncToPublicLeaderboard==='function') syncToPublicLeaderboard(user);
     return {user};
   },
-  login(username, password) {
+
+  _localLogin(username, password) {
     const users=this.getUsers(); const user=users[username];
     if(!user||user.password!==btoa(password)) return {error:'Invalid username or password'};
     this.saveSession(username); return {user};
   },
 };
 
-function syncToPublicLeaderboard(user){
+// Push latest user state to server (fire-and-forget, non-blocking)
+function syncToServer(user) {
   if(!user||!user.username) return;
   fetch('/api/leaderboard',{
-    method:'POST',
+    method:'POST', credentials:'include',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({
-      username:user.username,
-      balance:user.balance,
-      stats:user.stats,
-      avatar:user.avatar||''
+      username: user.username,
+      balance:  user.balance,
+      stats:    user.stats,
+      avatar:   user.avatar||''
     })
   }).catch(()=>{});
 }
+
+// Keep old syncToPublicLeaderboard name working
+function syncToPublicLeaderboard(user){ syncToServer(user); }
 
 // ══════════════════════════════════════════════════════════
 // STATE
@@ -893,10 +954,32 @@ const UPGRADE_ITEMS=[
 // ══════════════════════════════════════════════════════════
 // INIT
 // ══════════════════════════════════════════════════════════
-window.addEventListener('DOMContentLoaded', ()=>{
-  const sname = DB.getSession();
-  if(sname){ const u=DB.getUser(sname); if(u){ setUser(u); } else showScreen('auth'); }
-  else showScreen('auth');
+window.addEventListener('DOMContentLoaded', async ()=>{
+  // Try server session first, fall back to localStorage
+  let authed = false;
+  if(SERVER_MODE){
+    try{
+      const r = await fetch('/api/me',{credentials:'include'});
+      const d = await r.json();
+      if(d.user){
+        // Merge server data with local data (local may have newer potion state)
+        const local = DB.getUser(d.user.username)||{};
+        const merged = Object.assign({}, local, d.user);
+        // Always trust server for balance/stats, local for potions/activePotions
+        merged.potions = local.potions||d.user.potions||{luck:0,greed:0,fortune:0,chaos:0};
+        merged.activePotions = local.activePotions||d.user.activePotions||[];
+        const us=DB.getUsers(); us[d.user.username]=merged; DB.saveUsers(us);
+        DB.saveSession(d.user.username);
+        setUser(merged);
+        authed=true;
+      }
+    }catch(e){}
+  }
+  if(!authed){
+    const sname = DB.getSession();
+    if(sname){ const u=DB.getUser(sname); if(u){ setUser(u); } else showScreen('auth'); }
+    else showScreen('auth');
+  }
   buildMinesGrid();
   updateDiceOdds();
   crashCanvas = document.getElementById('crash-canvas');
@@ -918,16 +1001,22 @@ function toggleAuth(){
     :'Have an account? <a onclick="toggleAuth()">Sign in</a>';
   document.getElementById('auth-error').textContent='';
 }
-function authSubmit(){
+async function authSubmit(){
   const username=document.getElementById('auth-user').value.trim();
   const password=document.getElementById('auth-pass').value;
   const errEl=document.getElementById('auth-error'); errEl.textContent='';
   if(!username||!password){errEl.textContent='Please fill in both fields';return;}
-  const res=isLogin?DB.login(username,password):DB.register(username,password);
+  const btn=document.querySelector('.btn-gold');
+  if(btn){btn.disabled=true;btn.textContent='...';}
+  const res=isLogin
+    ? await DB.loginAsync(username,password)
+    : await DB.registerAsync(username,password);
+  if(btn){btn.disabled=false;btn.textContent='Enter Casino';}
   if(res.error){errEl.textContent=res.error;return;}
   setUser(res.user);
 }
 function logout(){
+  if(SERVER_MODE) fetch('/api/logout',{method:'POST',credentials:'include'}).catch(()=>{});
   DB.clearSession(); currentUser=null; activePotions=[];
   updatePotionUI();
   document.getElementById('header-avatar').innerHTML='👤';
@@ -1099,6 +1188,10 @@ function uploadAvatar(input){
     currentUser.avatar=data;
     const stored=DB.getUser(currentUser.username);
     if(stored){ stored.avatar=data; DB.saveUser(stored); }
+    // Also push to server explicitly
+    if(SERVER_MODE) fetch('/api/avatar',{method:'POST',credentials:'include',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({avatar:data})}).catch(()=>{});
     document.getElementById('profile-img').src=data;
     document.getElementById('profile-img').style.display='block';
     document.getElementById('profile-emoji').style.display='none';
@@ -1208,7 +1301,7 @@ function openCrate(type){
   const def=CRATE_DEFS[type];
   if(currentUser.balance<def.price){toast('❌ Not enough coins');return;}
 
-  // Deduct price upfront
+  // Deduct price
   currentUser.balance=Math.round((currentUser.balance-def.price)*100)/100;
   const stored=DB.getUser(currentUser.username);
   if(stored){stored.balance=currentUser.balance;DB.saveUser(stored);}
@@ -1229,12 +1322,11 @@ function openCrate(type){
 
   setTimeout(()=>{
     if(isPotion){
-      // Pick random potion from pool — counts as a loss (no coin reward) but wagered is tracked
+      // Pick random potion from pool
       const potionType=def.potionPool[Math.floor(Math.random()*def.potionPool.length)];
       const pt=POTION_TYPES[potionType];
       if(!currentUser.potions) currentUser.potions={luck:0,greed:0,fortune:0,chaos:0};
       currentUser.potions[potionType]=(currentUser.potions[potionType]||0)+1;
-      applyBetResult(def.price, 0);
       const stored2=DB.getUser(currentUser.username);
       if(stored2){stored2.potions=currentUser.potions;DB.saveUser(stored2);}
       iconEl.textContent=pt.icon;
@@ -1244,8 +1336,10 @@ function openCrate(type){
     } else {
       const [min,max]=def.moneyRange;
       const coins=Math.round((min+Math.random()*(max-min))*100)/100;
-      const rawProfit=coins-def.price;
-      applyBetResult(def.price, rawProfit);
+      currentUser.balance=Math.round((currentUser.balance+coins)*100)/100;
+      const stored2=DB.getUser(currentUser.username);
+      if(stored2){stored2.balance=currentUser.balance;DB.saveUser(stored2);}
+      updateBalanceDisplay(currentUser.balance);
       iconEl.textContent='💰';
       titleEl.textContent='Coins Found!';
       detailEl.textContent=`+◈ ${coins.toFixed(2)} coins from the ${type} crate!`;
@@ -1340,7 +1434,7 @@ function crashAction(){
   const btn=document.getElementById('crash-btn');
   if(crashActive){
     cancelAnimationFrame(crashAnimFrame); crashActive=false;
-    const rawProfit=Math.round(crashBet*crashMult*100)/100;
+    const rawProfit=Math.round((crashBet*crashMult-crashBet)*100)/100;
     const profit=applyBetResult(crashBet,rawProfit);
     btn.textContent='Place Bet'; btn.className='btn-action';
     document.getElementById('crash-mult-display').className='multiplier-big';
@@ -1367,10 +1461,8 @@ function crashAction(){
       crashActive=false; cancelAnimationFrame(crashAnimFrame);
       document.getElementById('crash-mult-display').className='multiplier-big crashed';
       document.getElementById('crash-mult-display').textContent=crashCrashAt.toFixed(2)+'×';
-      if(!currentUser.stats) currentUser.stats={wins:0,losses:0,total_wagered:0,biggest_win:0};
-      currentUser.stats.total_wagered=Math.round((currentUser.stats.total_wagered+crashBet)*100)/100;
       currentUser.stats.losses++;
-      const s=DB.getUser(currentUser.username); if(s){s.stats=currentUser.stats;DB.saveUser(s);}
+      const stored2=DB.getUser(currentUser.username); if(stored2){stored2.stats=currentUser.stats;DB.saveUser(stored2);}
       btn.textContent='Place Bet'; btn.className='btn-action';
       showResult('crash-result','crash-result-title','crash-result-detail',false,false,
         `💥 Crashed at ${crashCrashAt.toFixed(2)}×`,`Lost $${bet.toFixed(2)}`);
@@ -1425,8 +1517,6 @@ function revealMine(pos,cell){
       c.classList.add('disabled');
       if(minePositions.has(parseInt(c.dataset.pos))&&!c.classList.contains('revealed')){c.textContent='💣';c.classList.add('mine');}
     });
-    if(!currentUser.stats) currentUser.stats={wins:0,losses:0,total_wagered:0,biggest_win:0};
-    currentUser.stats.total_wagered=Math.round((currentUser.stats.total_wagered+minesBet)*100)/100;
     currentUser.stats.losses++;
     const stored=DB.getUser(currentUser.username); if(stored){stored.stats=currentUser.stats;DB.saveUser(stored);}
     document.getElementById('mines-start-btn').style.display='block';
@@ -1447,8 +1537,7 @@ function minesCashout(){
   const mult=minesCalcMult(minesRevealed.length);
   const rawProfit=Math.round((minesBet*mult-minesBet)*100)/100;
   minesActive=false;
-  const rawPayout=Math.round(minesBet*mult*100)/100;
-  const profit=applyBetResult(minesBet,rawPayout);
+  const profit=applyBetResult(0,minesBet+rawProfit);
   document.querySelectorAll('.mine-cell').forEach(c=>c.classList.add('disabled'));
   document.getElementById('mines-start-btn').style.display='block';
   document.getElementById('mines-cashout-btn').style.display='none';
@@ -1767,8 +1856,6 @@ function chickenCross(){
   if(hit){
     if(laneEl){ laneEl.textContent='💥'; laneEl.classList.add('danger'); }
     chickenActive=false;
-    if(!currentUser.stats) currentUser.stats={wins:0,losses:0,total_wagered:0,biggest_win:0};
-    currentUser.stats.total_wagered=Math.round((currentUser.stats.total_wagered+chickenBet)*100)/100;
     currentUser.stats.losses++;
     const stored=DB.getUser(currentUser.username); if(stored){stored.stats=currentUser.stats;DB.saveUser(stored);}
     document.getElementById('ck-cross-btn').style.display='none';
@@ -1791,15 +1878,14 @@ function chickenCashout(){
   if(!chickenActive&&chickenLane===0) return;
   chickenActive=false;
   const mult=chickenCalcMult(chickenLane);
-  const displayProfit=Math.round((chickenBet*mult-chickenBet)*100)/100;
-  const rawPayout=Math.round(chickenBet*mult*100)/100;
-  const profit=applyBetResult(chickenBet,rawPayout);
+  const rawProfit=Math.round((chickenBet*mult-chickenBet)*100)/100;
+  const profit=applyBetResult(0,chickenBet+rawProfit);
   document.getElementById('ck-cross-btn').style.display='none';
   document.getElementById('ck-cashout-btn').style.display='none';
   document.getElementById('ck-start-btn').style.display='block';
   showResult('ck-result','ck-result-title','ck-result-detail',true,false,
-    `🐔 Safe! ${mult.toFixed(2)}×`,`Crossed ${chickenLane} lanes — +$${displayProfit.toFixed(2)}`);
-  toast(`🐔 Cashed out! +$${displayProfit.toFixed(2)}`,'win');
+    `🐔 Safe! ${mult.toFixed(2)}×`,`Crossed ${chickenLane} lanes — +$${rawProfit.toFixed(2)}`);
+  toast(`🐔 Cashed out! +$${rawProfit.toFixed(2)}`,'win');
 }
 
 // ══════════════════════════════════════════════════════════
@@ -1862,7 +1948,16 @@ function playUpgrader(){
       clearInterval(interval);
       if(needle) needle.style.left=Math.min(99,roll)+'%';
       const rawProfit=won?to.val-from.val:-from.val;
-      applyBetResult(from.val, rawProfit);
+      if(won){
+        currentUser.balance=Math.round((currentUser.balance+to.val)*100)/100;
+        const s=DB.getUser(currentUser.username); if(s){s.balance=currentUser.balance;DB.saveUser(s);}
+        updateBalanceDisplay(currentUser.balance);
+        currentUser.stats.wins++;
+        if(to.val-from.val>currentUser.stats.biggest_win) currentUser.stats.biggest_win=to.val-from.val;
+      } else {
+        currentUser.stats.losses++;
+      }
+      const s2=DB.getUser(currentUser.username); if(s2){s2.stats=currentUser.stats;DB.saveUser(s2);}
       showResult('up-result','up-result-title','up-result-detail',won,false,
         won?`✨ Upgraded! ${from.icon}→${to.icon}`:`💸 Failed — Lost ${from.icon}`,
         won?`+$${(to.val-from.val).toFixed(2)} profit!`:`Lost $${from.val}`);
